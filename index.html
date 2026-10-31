@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Birthday Surprise</title>
+<meta name="theme-color" content="#f7e1e4">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="petals" id="petals" aria-hidden="true"></div>
+
+<section id="welcome" class="screen">
+  <div class="envelope" aria-hidden="true"><div class="flap"></div><div class="seal">&#10048;</div></div>
+  <p class="mystery">Something small and bright is waiting for you&hellip;</p>
+  <button class="btn" id="openBtn" type="button">Open Your Surprise</button>
+</section>
+
+<main id="main" hidden>
+  <button class="music" id="musicBtn" type="button" aria-pressed="false" aria-label="Play music"><span id="musicIcon">&#9835;</span></button>
+
+  <header class="hero">
+    <div class="bloom" aria-hidden="true">&#10048; &#10047; &#10048;</div>
+    <p class="date" id="dateText"></p>
+    <h1>Happy Birthday,<br><span id="nameText"></span></h1>
+    <p class="sub" id="subText"></p>
+  </header>
+
+  <section class="gallery" aria-labelledby="gt">
+    <h2 id="gt">Little Moments</h2>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section class="wishes" aria-labelledby="bt">
+    <h2 id="bt">Birthday Wishes</h2>
+    <div class="book">
+      <article class="card page" id="pageCard" aria-live="polite">
+        <div class="pgicon" id="pgIcon" aria-hidden="true"></div>
+        <h3 id="pgTitle"></h3>
+        <p id="pgText"></p>
+      </article>
+      <nav class="booknav" aria-label="Wish pages">
+        <button class="btn small" id="pgPrev" type="button">&#8249; Back</button>
+        <span id="pgNum" aria-hidden="true"></span>
+        <button class="btn small" id="pgNext" type="button">Next &#8250;</button>
+      </nav>
+    </div>
+  </section>
+
+  <section class="letter" aria-labelledby="lt">
+    <h2 id="lt">A Letter for You</h2>
+    <article class="card" id="letterText"></article>
+  </section>
+
+  <section class="wish" aria-labelledby="wt">
+    <h2 id="wt">Make a Wish</h2>
+    <p>Close your eyes, think of something lovely, then tap.</p>
+    <button class="btn" id="wishBtn" type="button">&#10022; Make a Wish</button>
+    <p class="card wishmsg" id="wishMsg" hidden></p>
+  </section>
+
+  <footer class="final">
+    <h2 id="finalText"></h2>
+    <p class="made">Made with care, just for you</p>
+    <button class="btn ghost" id="replayBtn" type="button">Replay the Surprise</button>
+  </footer>
+</main>
+
+<div class="ytbox" id="ytBox"><div id="ytPlayer"></div></div>
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lbx close" id="lbClose" type="button" aria-label="Close">&times;</button>
+  <button class="lbx prev" id="lbPrev" type="button" aria-label="Previous photo">&#8249;</button>
+  <figure><div id="lbImg"></div><figcaption id="lbCap"></figcaption></figure>
+  <button class="lbx next" id="lbNext" type="button" aria-label="Next photo">&#8250;</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
